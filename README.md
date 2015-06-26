@@ -2,7 +2,7 @@
 
 In this exercise you have to load a very simple database consisting of a single table. The database is stored in CSV format in a text file. Every line in that file has the following format:
 
-<Username>;<First Name>;<Last Name>;<Department>;<Account End Date>;<Telephone Number>
+Username;First Name;Last Name;Department;Account End Date;Telephone Number
 
 Here is a concrete example:
 
