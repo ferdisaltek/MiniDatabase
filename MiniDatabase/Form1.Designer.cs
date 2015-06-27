@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.AccountEndDate = new System.Windows.Forms.DateTimePicker();
             this.PhoneNumber = new System.Windows.Forms.TextBox();
             this.PhoneAreaCode = new System.Windows.Forms.TextBox();
@@ -45,9 +46,39 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelSearchByName = new System.Windows.Forms.Panel();
+            this.searchBoxLastName = new System.Windows.Forms.TextBox();
+            this.SearchBoxFirstName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelSearchByPhone = new System.Windows.Forms.Panel();
+            this.searchBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panelSearchByDepartment = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panelSearchByDate = new System.Windows.Forms.Panel();
+            this.dateIntervalEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateIntervalStart = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.grd = new System.Windows.Forms.DataGridView();
+            this.grdUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdAccountEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panelSearchByName.SuspendLayout();
+            this.panelSearchByPhone.SuspendLayout();
+            this.panelSearchByDepartment.SuspendLayout();
+            this.panelSearchByDate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -57,7 +88,7 @@
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(707, 527);
+            this.tabControl1.Size = new System.Drawing.Size(910, 634);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -80,10 +111,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(699, 501);
+            this.tabPage1.Size = new System.Drawing.Size(902, 608);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(362, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 46);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Kaydet";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AccountEndDate
             // 
@@ -203,35 +245,257 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panelSearchByName);
+            this.tabPage2.Controls.Add(this.panelSearchByPhone);
+            this.tabPage2.Controls.Add(this.panelSearchByDepartment);
+            this.tabPage2.Controls.Add(this.panelSearchByDate);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.grd);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(699, 501);
+            this.tabPage2.Size = new System.Drawing.Size(902, 608);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // panelSearchByName
             // 
-            this.button1.Location = new System.Drawing.Point(362, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panelSearchByName.Controls.Add(this.searchBoxLastName);
+            this.panelSearchByName.Controls.Add(this.SearchBoxFirstName);
+            this.panelSearchByName.Controls.Add(this.label10);
+            this.panelSearchByName.Controls.Add(this.label7);
+            this.panelSearchByName.Location = new System.Drawing.Point(16, 17);
+            this.panelSearchByName.Name = "panelSearchByName";
+            this.panelSearchByName.Size = new System.Drawing.Size(267, 50);
+            this.panelSearchByName.TabIndex = 12;
+            // 
+            // searchBoxLastName
+            // 
+            this.searchBoxLastName.Location = new System.Drawing.Point(90, 26);
+            this.searchBoxLastName.Name = "searchBoxLastName";
+            this.searchBoxLastName.Size = new System.Drawing.Size(170, 20);
+            this.searchBoxLastName.TabIndex = 8;
+            // 
+            // SearchBoxFirstName
+            // 
+            this.SearchBoxFirstName.Location = new System.Drawing.Point(90, 3);
+            this.SearchBoxFirstName.Name = "SearchBoxFirstName";
+            this.SearchBoxFirstName.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxFirstName.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(3, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Last Name:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(3, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Name:";
+            // 
+            // panelSearchByPhone
+            // 
+            this.panelSearchByPhone.Controls.Add(this.searchBoxPhoneNumber);
+            this.panelSearchByPhone.Controls.Add(this.label12);
+            this.panelSearchByPhone.Location = new System.Drawing.Point(310, 75);
+            this.panelSearchByPhone.Name = "panelSearchByPhone";
+            this.panelSearchByPhone.Size = new System.Drawing.Size(266, 28);
+            this.panelSearchByPhone.TabIndex = 11;
+            // 
+            // searchBoxPhoneNumber
+            // 
+            this.searchBoxPhoneNumber.Location = new System.Drawing.Point(88, 0);
+            this.searchBoxPhoneNumber.Name = "searchBoxPhoneNumber";
+            this.searchBoxPhoneNumber.Size = new System.Drawing.Size(170, 20);
+            this.searchBoxPhoneNumber.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(9, 1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Phone:";
+            // 
+            // panelSearchByDepartment
+            // 
+            this.panelSearchByDepartment.Controls.Add(this.textBox1);
+            this.panelSearchByDepartment.Controls.Add(this.label11);
+            this.panelSearchByDepartment.Location = new System.Drawing.Point(17, 73);
+            this.panelSearchByDepartment.Name = "panelSearchByDepartment";
+            this.panelSearchByDepartment.Size = new System.Drawing.Size(266, 28);
+            this.panelSearchByDepartment.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(88, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(170, 20);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(1, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Department:";
+            // 
+            // panelSearchByDate
+            // 
+            this.panelSearchByDate.Controls.Add(this.dateIntervalEnd);
+            this.panelSearchByDate.Controls.Add(this.dateIntervalStart);
+            this.panelSearchByDate.Controls.Add(this.label8);
+            this.panelSearchByDate.Controls.Add(this.label9);
+            this.panelSearchByDate.Location = new System.Drawing.Point(310, 20);
+            this.panelSearchByDate.Name = "panelSearchByDate";
+            this.panelSearchByDate.Size = new System.Drawing.Size(259, 51);
+            this.panelSearchByDate.TabIndex = 10;
+            // 
+            // dateIntervalEnd
+            // 
+            this.dateIntervalEnd.Location = new System.Drawing.Point(84, 28);
+            this.dateIntervalEnd.Name = "dateIntervalEnd";
+            this.dateIntervalEnd.Size = new System.Drawing.Size(170, 20);
+            this.dateIntervalEnd.TabIndex = 7;
+            // 
+            // dateIntervalStart
+            // 
+            this.dateIntervalStart.Location = new System.Drawing.Point(84, 2);
+            this.dateIntervalStart.Name = "dateIntervalStart";
+            this.dateIntervalStart.Size = new System.Drawing.Size(170, 20);
+            this.dateIntervalStart.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(9, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Date Start:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(9, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Date End:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(178, 107);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 58);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Multiple",
+            "By Name",
+            "By Department",
+            "By Telephone Number",
+            "By Account End Date"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 109);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdUserName,
+            this.grdName,
+            this.grdLastName,
+            this.grdDepartment,
+            this.grdAccountEndDate,
+            this.grdPhoneNumber});
+            this.grd.Location = new System.Drawing.Point(16, 174);
+            this.grd.Name = "grd";
+            this.grd.Size = new System.Drawing.Size(687, 459);
+            this.grd.TabIndex = 0;
+            // 
+            // grdUserName
+            // 
+            this.grdUserName.HeaderText = "Kullanıcı Adı";
+            this.grdUserName.Name = "grdUserName";
+            // 
+            // grdName
+            // 
+            this.grdName.HeaderText = "İsim";
+            this.grdName.Name = "grdName";
+            // 
+            // grdLastName
+            // 
+            this.grdLastName.HeaderText = "Soy İsim";
+            this.grdLastName.Name = "grdLastName";
+            // 
+            // grdDepartment
+            // 
+            this.grdDepartment.HeaderText = "Departman";
+            this.grdDepartment.Name = "grdDepartment";
+            this.grdDepartment.Width = 120;
+            // 
+            // grdAccountEndDate
+            // 
+            this.grdAccountEndDate.HeaderText = "Vade Sonu";
+            this.grdAccountEndDate.Name = "grdAccountEndDate";
+            // 
+            // grdPhoneNumber
+            // 
+            this.grdPhoneNumber.HeaderText = "Telefon Numarası";
+            this.grdPhoneNumber.Name = "grdPhoneNumber";
+            this.grdPhoneNumber.Width = 120;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 529);
+            this.ClientSize = new System.Drawing.Size(910, 647);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panelSearchByName.ResumeLayout(false);
+            this.panelSearchByName.PerformLayout();
+            this.panelSearchByPhone.ResumeLayout(false);
+            this.panelSearchByPhone.PerformLayout();
+            this.panelSearchByDepartment.ResumeLayout(false);
+            this.panelSearchByDepartment.PerformLayout();
+            this.panelSearchByDate.ResumeLayout(false);
+            this.panelSearchByDate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +520,31 @@
         private System.Windows.Forms.TextBox PhoneCountryCode;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox SearchBoxFirstName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView grd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
+        private System.Windows.Forms.DateTimePicker dateIntervalStart;
+        private System.Windows.Forms.DateTimePicker dateIntervalEnd;
+        private System.Windows.Forms.TextBox searchBoxLastName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panelSearchByName;
+        private System.Windows.Forms.Panel panelSearchByDepartment;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelSearchByDate;
+        private System.Windows.Forms.Panel panelSearchByPhone;
+        private System.Windows.Forms.TextBox searchBoxPhoneNumber;
+        private System.Windows.Forms.Label label12;
     }
 }
 
