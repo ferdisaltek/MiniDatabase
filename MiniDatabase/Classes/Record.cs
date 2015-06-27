@@ -9,10 +9,10 @@ namespace MiniDatabase.Classes
     interface IDBOperations
     {
         //int loadData(string filename);
-        //Record[] findByName(string firstName, string LastName);
-        //Record[] findByDepartment(string department);
-        //Record[] findByTeleophoneNumber(string telephoneNumber);
-        //Record[] findByEndDate(DateTime intervalStart, DateTime intervalEnd);
+        List<Record> findByName(string firstName, string LastName);
+        List<Record> findByDepartment(string department);
+        List<Record> findByTelephoneNumber(string telephoneNumber);
+        List<Record> findByEndDate(DateTime intervalStart, DateTime intervalEnd);
 
         bool saveData(Record record);
 
@@ -37,8 +37,7 @@ namespace MiniDatabase.Classes
             Department = department;
             AccountEndDate = accountEndDate;
             TelephoneNumber = telephoneNumber;
-            AccountEndDatestr = String.Format("{0: yyyy-mm-dd}", accountEndDate);
-
+            AccountEndDatestr = String.Format("{0: yyyy-MM-dd}", accountEndDate);
         }
     }
 }
