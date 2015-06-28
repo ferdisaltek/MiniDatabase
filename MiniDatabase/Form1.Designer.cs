@@ -47,19 +47,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelSearchByName = new System.Windows.Forms.Panel();
-            this.searchBoxLastName = new System.Windows.Forms.TextBox();
+            this.SearchBoxLastName = new System.Windows.Forms.TextBox();
             this.SearchBoxFirstName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panelSearchByPhone = new System.Windows.Forms.Panel();
-            this.searchBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.SearchBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelSearchByDepartment = new System.Windows.Forms.Panel();
             this.SearchBoxDepartment = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panelSearchByDate = new System.Windows.Forms.Panel();
-            this.dateIntervalEnd = new System.Windows.Forms.DateTimePicker();
-            this.dateIntervalStart = new System.Windows.Forms.DateTimePicker();
+            this.SearchBoxdateIntervalEnd = new System.Windows.Forms.DateTimePicker();
+            this.SearchBoxdateIntervalStart = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -262,7 +262,7 @@
             // 
             // panelSearchByName
             // 
-            this.panelSearchByName.Controls.Add(this.searchBoxLastName);
+            this.panelSearchByName.Controls.Add(this.SearchBoxLastName);
             this.panelSearchByName.Controls.Add(this.SearchBoxFirstName);
             this.panelSearchByName.Controls.Add(this.label10);
             this.panelSearchByName.Controls.Add(this.label7);
@@ -271,12 +271,12 @@
             this.panelSearchByName.Size = new System.Drawing.Size(267, 50);
             this.panelSearchByName.TabIndex = 12;
             // 
-            // searchBoxLastName
+            // SearchBoxLastName
             // 
-            this.searchBoxLastName.Location = new System.Drawing.Point(90, 26);
-            this.searchBoxLastName.Name = "searchBoxLastName";
-            this.searchBoxLastName.Size = new System.Drawing.Size(170, 20);
-            this.searchBoxLastName.TabIndex = 8;
+            this.SearchBoxLastName.Location = new System.Drawing.Point(90, 26);
+            this.SearchBoxLastName.Name = "SearchBoxLastName";
+            this.SearchBoxLastName.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxLastName.TabIndex = 8;
             // 
             // SearchBoxFirstName
             // 
@@ -307,19 +307,19 @@
             // 
             // panelSearchByPhone
             // 
-            this.panelSearchByPhone.Controls.Add(this.searchBoxPhoneNumber);
+            this.panelSearchByPhone.Controls.Add(this.SearchBoxPhoneNumber);
             this.panelSearchByPhone.Controls.Add(this.label12);
             this.panelSearchByPhone.Location = new System.Drawing.Point(310, 75);
             this.panelSearchByPhone.Name = "panelSearchByPhone";
             this.panelSearchByPhone.Size = new System.Drawing.Size(266, 28);
             this.panelSearchByPhone.TabIndex = 11;
             // 
-            // searchBoxPhoneNumber
+            // SearchBoxPhoneNumber
             // 
-            this.searchBoxPhoneNumber.Location = new System.Drawing.Point(88, 0);
-            this.searchBoxPhoneNumber.Name = "searchBoxPhoneNumber";
-            this.searchBoxPhoneNumber.Size = new System.Drawing.Size(170, 20);
-            this.searchBoxPhoneNumber.TabIndex = 9;
+            this.SearchBoxPhoneNumber.Location = new System.Drawing.Point(88, 0);
+            this.SearchBoxPhoneNumber.Name = "SearchBoxPhoneNumber";
+            this.SearchBoxPhoneNumber.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxPhoneNumber.TabIndex = 9;
             // 
             // label12
             // 
@@ -359,8 +359,8 @@
             // 
             // panelSearchByDate
             // 
-            this.panelSearchByDate.Controls.Add(this.dateIntervalEnd);
-            this.panelSearchByDate.Controls.Add(this.dateIntervalStart);
+            this.panelSearchByDate.Controls.Add(this.SearchBoxdateIntervalEnd);
+            this.panelSearchByDate.Controls.Add(this.SearchBoxdateIntervalStart);
             this.panelSearchByDate.Controls.Add(this.label8);
             this.panelSearchByDate.Controls.Add(this.label9);
             this.panelSearchByDate.Location = new System.Drawing.Point(310, 20);
@@ -368,19 +368,19 @@
             this.panelSearchByDate.Size = new System.Drawing.Size(259, 51);
             this.panelSearchByDate.TabIndex = 10;
             // 
-            // dateIntervalEnd
+            // SearchBoxdateIntervalEnd
             // 
-            this.dateIntervalEnd.Location = new System.Drawing.Point(84, 28);
-            this.dateIntervalEnd.Name = "dateIntervalEnd";
-            this.dateIntervalEnd.Size = new System.Drawing.Size(170, 20);
-            this.dateIntervalEnd.TabIndex = 7;
+            this.SearchBoxdateIntervalEnd.Location = new System.Drawing.Point(84, 28);
+            this.SearchBoxdateIntervalEnd.Name = "SearchBoxdateIntervalEnd";
+            this.SearchBoxdateIntervalEnd.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxdateIntervalEnd.TabIndex = 7;
             // 
-            // dateIntervalStart
+            // SearchBoxdateIntervalStart
             // 
-            this.dateIntervalStart.Location = new System.Drawing.Point(84, 2);
-            this.dateIntervalStart.Name = "dateIntervalStart";
-            this.dateIntervalStart.Size = new System.Drawing.Size(170, 20);
-            this.dateIntervalStart.TabIndex = 6;
+            this.SearchBoxdateIntervalStart.Location = new System.Drawing.Point(84, 2);
+            this.SearchBoxdateIntervalStart.Name = "SearchBoxdateIntervalStart";
+            this.SearchBoxdateIntervalStart.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxdateIntervalStart.TabIndex = 6;
             // 
             // label8
             // 
@@ -541,9 +541,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
-        private System.Windows.Forms.DateTimePicker dateIntervalStart;
-        private System.Windows.Forms.DateTimePicker dateIntervalEnd;
-        private System.Windows.Forms.TextBox searchBoxLastName;
+        private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalStart;
+        private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalEnd;
+        private System.Windows.Forms.TextBox SearchBoxLastName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -552,7 +552,7 @@
         private System.Windows.Forms.TextBox SearchBoxDepartment;
         private System.Windows.Forms.Panel panelSearchByDate;
         private System.Windows.Forms.Panel panelSearchByPhone;
-        private System.Windows.Forms.TextBox searchBoxPhoneNumber;
+        private System.Windows.Forms.TextBox SearchBoxPhoneNumber;
         private System.Windows.Forms.Label label12;
     }
 }

@@ -81,6 +81,12 @@ namespace MiniDatabase
                 return false;
             }
 
+            //if ()
+            //{
+            //    MessageBox.Show("First Name should be less than 30 characters", "Input Error");
+            //    return false;
+            //}
+
             return true;
         }
 
@@ -141,16 +147,16 @@ namespace MiniDatabase
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Account End Date")
             {
-                                
+                results = findByEndDate(SearchBoxdateIntervalStart.Value , SearchBoxdateIntervalEnd.Value );                 
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Name")
             {
-                results = findByName(SearchBoxFirstName.Text, searchBoxLastName.Text);
+                results = findByName(SearchBoxFirstName.Text, SearchBoxLastName.Text);
             }
 
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Telephone Number")
             {
-                results = findByTelephoneNumber(searchBoxPhoneNumber.Text);
+                results = findByTelephoneNumber(SearchBoxPhoneNumber.Text);
             }
 
            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Department")
@@ -246,7 +252,23 @@ namespace MiniDatabase
 
         public List<Record> findByEndDate(DateTime intervalStart, DateTime intervalEnd)
         {
-            return null;
+            StreamReader reader = File.OpenText(filePath);
+            string tempLine = reader.ReadLine();
+            string[] sep = { ";" };
+            List<Record> resultSet = new List<Record>();
+
+            while (!String.IsNullOrEmpty(tempLine))
+            {
+                String[] valueArr = tempLine.Split(sep, StringSplitOptions.None);
+                Record tempRecord = new Record(valueArr[0], valueArr[1], valueArr[2], valueArr[3], DateTime.Parse(valueArr[4]), valueArr[5]);
+                if ((tempRecord.AccountEndDate > intervalStart) && (tempRecord.AccountEndDate < intervalEnd))
+                {
+                    resultSet.Add(new Record(tempRecord.UserName, tempRecord.FirstName, tempRecord.LastName, tempRecord.Department, tempRecord.AccountEndDate, tempRecord.TelephoneNumber));
+                }
+                tempLine = reader.ReadLine();
+            }
+
+            return resultSet; ;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
