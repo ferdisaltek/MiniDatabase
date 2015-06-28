@@ -150,13 +150,12 @@ namespace MiniDatabase
 
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Telephone Number")
             {
-               
-
+                results = findByTelephoneNumber(searchBoxPhoneNumber.Text);
             }
 
-            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Department")
+           else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Department")
             {
-                
+               results = findByDepartment(SearchBoxDepartment.Text);
             }
 
            grd.Rows.Clear();
@@ -226,7 +225,23 @@ namespace MiniDatabase
 
         public List<Record> findByTelephoneNumber(string telephoneNumber)
         {
-            return null;
+            StreamReader reader = File.OpenText(filePath);
+            string tempLine = reader.ReadLine();
+            string[] sep = { ";" };
+            List<Record> resultSet = new List<Record>();
+
+            while (!String.IsNullOrEmpty(tempLine))
+            {
+                String[] valueArr = tempLine.Split(sep, StringSplitOptions.None);
+                Record tempRecord = new Record(valueArr[0], valueArr[1], valueArr[2], valueArr[3], DateTime.Parse(valueArr[4]), valueArr[5]);
+                if (tempRecord.TelephoneNumber == telephoneNumber)
+                {
+                    resultSet.Add(new Record(tempRecord.UserName, tempRecord.FirstName, tempRecord.LastName, tempRecord.Department, tempRecord.AccountEndDate, tempRecord.TelephoneNumber));
+                }
+                tempLine = reader.ReadLine();
+            }
+
+            return resultSet;
         }
 
         public List<Record> findByEndDate(DateTime intervalStart, DateTime intervalEnd)

@@ -55,7 +55,7 @@
             this.searchBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelSearchByDepartment = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBoxDepartment = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panelSearchByDate = new System.Windows.Forms.Panel();
             this.dateIntervalEnd = new System.Windows.Forms.DateTimePicker();
@@ -333,19 +333,19 @@
             // 
             // panelSearchByDepartment
             // 
-            this.panelSearchByDepartment.Controls.Add(this.textBox1);
+            this.panelSearchByDepartment.Controls.Add(this.SearchBoxDepartment);
             this.panelSearchByDepartment.Controls.Add(this.label11);
             this.panelSearchByDepartment.Location = new System.Drawing.Point(17, 73);
             this.panelSearchByDepartment.Name = "panelSearchByDepartment";
             this.panelSearchByDepartment.Size = new System.Drawing.Size(266, 28);
             this.panelSearchByDepartment.TabIndex = 11;
             // 
-            // textBox1
+            // SearchBoxDepartment
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 9;
+            this.SearchBoxDepartment.Location = new System.Drawing.Point(88, 0);
+            this.SearchBoxDepartment.Name = "SearchBoxDepartment";
+            this.SearchBoxDepartment.Size = new System.Drawing.Size(170, 20);
+            this.SearchBoxDepartment.TabIndex = 9;
             // 
             // label11
             // 
@@ -549,7 +549,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panelSearchByName;
         private System.Windows.Forms.Panel panelSearchByDepartment;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchBoxDepartment;
         private System.Windows.Forms.Panel panelSearchByDate;
         private System.Windows.Forms.Panel panelSearchByPhone;
         private System.Windows.Forms.TextBox searchBoxPhoneNumber;
