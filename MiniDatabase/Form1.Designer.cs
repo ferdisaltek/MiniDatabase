@@ -442,43 +442,43 @@
             this.grd.Location = new System.Drawing.Point(16, 174);
             this.grd.Name = "grd";
             this.grd.ReadOnly = true;
-            this.grd.Size = new System.Drawing.Size(687, 459);
+            this.grd.Size = new System.Drawing.Size(702, 459);
             this.grd.TabIndex = 0;
             // 
             // grdUserName
             // 
-            this.grdUserName.HeaderText = "Kullanıcı Adı";
+            this.grdUserName.HeaderText = "Username";
             this.grdUserName.Name = "grdUserName";
             this.grdUserName.ReadOnly = true;
             // 
             // grdName
             // 
-            this.grdName.HeaderText = "İsim";
+            this.grdName.HeaderText = "First Name";
             this.grdName.Name = "grdName";
             this.grdName.ReadOnly = true;
             // 
             // grdLastName
             // 
-            this.grdLastName.HeaderText = "Soy İsim";
+            this.grdLastName.HeaderText = "Last Name";
             this.grdLastName.Name = "grdLastName";
             this.grdLastName.ReadOnly = true;
             // 
             // grdDepartment
             // 
-            this.grdDepartment.HeaderText = "Departman";
+            this.grdDepartment.HeaderText = "Department";
             this.grdDepartment.Name = "grdDepartment";
             this.grdDepartment.ReadOnly = true;
             this.grdDepartment.Width = 120;
             // 
             // grdAccountEndDate
             // 
-            this.grdAccountEndDate.HeaderText = "Vade Sonu";
+            this.grdAccountEndDate.HeaderText = "Account End Date";
             this.grdAccountEndDate.Name = "grdAccountEndDate";
             this.grdAccountEndDate.ReadOnly = true;
             // 
             // grdPhoneNumber
             // 
-            this.grdPhoneNumber.HeaderText = "Telefon Numarası";
+            this.grdPhoneNumber.HeaderText = "Telephone Number";
             this.grdPhoneNumber.Name = "grdPhoneNumber";
             this.grdPhoneNumber.ReadOnly = true;
             this.grdPhoneNumber.Width = 120;
@@ -535,12 +535,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView grd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
         private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalStart;
         private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalEnd;
         private System.Windows.Forms.TextBox SearchBoxLastName;
@@ -554,6 +548,12 @@
         private System.Windows.Forms.Panel panelSearchByPhone;
         private System.Windows.Forms.TextBox SearchBoxPhoneNumber;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
     }
 }
 
