@@ -41,6 +41,7 @@ namespace MiniDatabase
             csv.Append(";");
             csv.Append(record.TelephoneNumber);
             csv.Append("\n");
+          
 
             File.AppendAllText(filePath, csv.ToString());
 
@@ -194,7 +195,7 @@ namespace MiniDatabase
                 Record tempRecord = new Record(valueArr[0], valueArr[1], valueArr[2], valueArr[3], DateTime.Parse(valueArr[4]), valueArr[5]);
                 if ((tempRecord.FirstName == firstName) && (tempRecord.LastName == LastName))
                 {
-                    resultSet.Add(tempRecord);
+                    resultSet.Add(new Record(tempRecord.UserName, tempRecord.FirstName, tempRecord.LastName, tempRecord.Department, tempRecord.AccountEndDate, tempRecord.TelephoneNumber));
                 }
                 tempLine = reader.ReadLine();
             }
@@ -204,7 +205,23 @@ namespace MiniDatabase
 
         public List<Record> findByDepartment(string department)
         {
-            return null;
+            StreamReader reader = File.OpenText(filePath);
+            string tempLine = reader.ReadLine();
+            string[] sep = { ";" };
+            List<Record> resultSet = new List<Record>();
+
+            while (!String.IsNullOrEmpty(tempLine))
+            {
+                String[] valueArr = tempLine.Split(sep, StringSplitOptions.None);
+                Record tempRecord = new Record(valueArr[0], valueArr[1], valueArr[2], valueArr[3], DateTime.Parse(valueArr[4]), valueArr[5]);
+                if (tempRecord.Department == department)
+                {
+                    resultSet.Add(new Record(tempRecord.UserName, tempRecord.FirstName, tempRecord.LastName, tempRecord.Department, tempRecord.AccountEndDate, tempRecord.TelephoneNumber));
+                }
+                tempLine = reader.ReadLine();
+            }
+
+            return resultSet;
         }
 
         public List<Record> findByTelephoneNumber(string telephoneNumber)

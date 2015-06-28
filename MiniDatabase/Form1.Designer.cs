@@ -429,6 +429,8 @@
             // 
             // grd
             // 
+            this.grd.AllowUserToAddRows = false;
+            this.grd.AllowUserToDeleteRows = false;
             this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.grdUserName,
@@ -439,6 +441,7 @@
             this.grdPhoneNumber});
             this.grd.Location = new System.Drawing.Point(16, 174);
             this.grd.Name = "grd";
+            this.grd.ReadOnly = true;
             this.grd.Size = new System.Drawing.Size(687, 459);
             this.grd.TabIndex = 0;
             // 
@@ -446,32 +449,38 @@
             // 
             this.grdUserName.HeaderText = "Kullanıcı Adı";
             this.grdUserName.Name = "grdUserName";
+            this.grdUserName.ReadOnly = true;
             // 
             // grdName
             // 
             this.grdName.HeaderText = "İsim";
             this.grdName.Name = "grdName";
+            this.grdName.ReadOnly = true;
             // 
             // grdLastName
             // 
             this.grdLastName.HeaderText = "Soy İsim";
             this.grdLastName.Name = "grdLastName";
+            this.grdLastName.ReadOnly = true;
             // 
             // grdDepartment
             // 
             this.grdDepartment.HeaderText = "Departman";
             this.grdDepartment.Name = "grdDepartment";
+            this.grdDepartment.ReadOnly = true;
             this.grdDepartment.Width = 120;
             // 
             // grdAccountEndDate
             // 
             this.grdAccountEndDate.HeaderText = "Vade Sonu";
             this.grdAccountEndDate.Name = "grdAccountEndDate";
+            this.grdAccountEndDate.ReadOnly = true;
             // 
             // grdPhoneNumber
             // 
             this.grdPhoneNumber.HeaderText = "Telefon Numarası";
             this.grdPhoneNumber.Name = "grdPhoneNumber";
+            this.grdPhoneNumber.ReadOnly = true;
             this.grdPhoneNumber.Width = 120;
             // 
             // Form1
