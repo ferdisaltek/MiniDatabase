@@ -416,6 +416,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "SearchFiled",
             "Multiple",
             "By Name",
             "By Department",
@@ -442,43 +443,43 @@
             this.grd.Location = new System.Drawing.Point(16, 174);
             this.grd.Name = "grd";
             this.grd.ReadOnly = true;
-            this.grd.Size = new System.Drawing.Size(702, 459);
+            this.grd.Size = new System.Drawing.Size(687, 459);
             this.grd.TabIndex = 0;
             // 
             // grdUserName
             // 
-            this.grdUserName.HeaderText = "Username";
+            this.grdUserName.HeaderText = "Kullanıcı Adı";
             this.grdUserName.Name = "grdUserName";
             this.grdUserName.ReadOnly = true;
             // 
             // grdName
             // 
-            this.grdName.HeaderText = "First Name";
+            this.grdName.HeaderText = "İsim";
             this.grdName.Name = "grdName";
             this.grdName.ReadOnly = true;
             // 
             // grdLastName
             // 
-            this.grdLastName.HeaderText = "Last Name";
+            this.grdLastName.HeaderText = "Soy İsim";
             this.grdLastName.Name = "grdLastName";
             this.grdLastName.ReadOnly = true;
             // 
             // grdDepartment
             // 
-            this.grdDepartment.HeaderText = "Department";
+            this.grdDepartment.HeaderText = "Departman";
             this.grdDepartment.Name = "grdDepartment";
             this.grdDepartment.ReadOnly = true;
             this.grdDepartment.Width = 120;
             // 
             // grdAccountEndDate
             // 
-            this.grdAccountEndDate.HeaderText = "Account End Date";
+            this.grdAccountEndDate.HeaderText = "Vade Sonu";
             this.grdAccountEndDate.Name = "grdAccountEndDate";
             this.grdAccountEndDate.ReadOnly = true;
             // 
             // grdPhoneNumber
             // 
-            this.grdPhoneNumber.HeaderText = "Telephone Number";
+            this.grdPhoneNumber.HeaderText = "Telefon Numarası";
             this.grdPhoneNumber.Name = "grdPhoneNumber";
             this.grdPhoneNumber.ReadOnly = true;
             this.grdPhoneNumber.Width = 120;
@@ -535,6 +536,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView grd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
         private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalStart;
         private System.Windows.Forms.DateTimePicker SearchBoxdateIntervalEnd;
         private System.Windows.Forms.TextBox SearchBoxLastName;
@@ -548,12 +555,6 @@
         private System.Windows.Forms.Panel panelSearchByPhone;
         private System.Windows.Forms.TextBox SearchBoxPhoneNumber;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
     }
 }
 

@@ -53,6 +53,10 @@ namespace MiniDatabase
         {
             string phone = PhoneCountryCode.Text + " " + PhoneAreaCode.Text + " " + PhoneNumber.Text;
             Record tempRecord = new Record(UserName.Text, FirstName.Text, LastName.Text, Department.Text, AccountEndDate.Value, phone);
+            //if(!FormValidation())
+            //{
+            //    return;
+            //}
             if (saveData(tempRecord))
             {
                 MessageBox.Show("Success!!!", "Congratulations");
@@ -63,7 +67,7 @@ namespace MiniDatabase
 
         private bool FormValidation()
         {
-            if (UserName.Text.Length < 10)
+            if (UserName.Text.Length > 10)
             {
                 MessageBox.Show("User Name should be less than 10 characters", "Input Error");
                 return false;
@@ -92,13 +96,19 @@ namespace MiniDatabase
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
 
-             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "Multiple")
+            if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "SearchFiled")
             {
                 panelSearchByDate.Visible = true;
                 panelSearchByName.Visible = true;
                 panelSearchByPhone.Visible = true;
+                panelSearchByDepartment.Visible = true;
+            }
+            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "Multiple")
+            {
+                panelSearchByDate.Visible = false;
+                panelSearchByName.Visible = true;
+                panelSearchByPhone.Visible = false;
                 panelSearchByDepartment.Visible = true;
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Account End Date")
@@ -143,7 +153,10 @@ namespace MiniDatabase
             List<Record> results = new List<Record>();
            if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "Multiple")
             {
-               
+                //results = findByEndDate(SearchBoxdateIntervalStart.Value, SearchBoxdateIntervalEnd.Value);
+                results = findByName(SearchBoxFirstName.Text, SearchBoxLastName.Text);
+               // results = findByTelephoneNumber(SearchBoxPhoneNumber.Text);
+                results = findByDepartment(SearchBoxDepartment.Text);
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "By Account End Date")
             {
@@ -270,6 +283,8 @@ namespace MiniDatabase
 
             return resultSet; ;
         }
+
+
 
         private void tabPage1_Click(object sender, EventArgs e)
         {

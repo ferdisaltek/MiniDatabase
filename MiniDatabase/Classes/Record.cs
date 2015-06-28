@@ -13,6 +13,7 @@ namespace MiniDatabase.Classes
         List<Record> findByDepartment(string department);
         List<Record> findByTelephoneNumber(string telephoneNumber);
         List<Record> findByEndDate(DateTime intervalStart, DateTime intervalEnd);
+     
 
         bool saveData(Record record);
 
