@@ -417,11 +417,11 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "SearchFiled",
-            "Multiple",
             "By Name",
             "By Department",
             "By Telephone Number",
-            "By Account End Date"});
+            "By Account End Date",
+            "Multiple"});
             this.comboBox1.Location = new System.Drawing.Point(16, 109);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);

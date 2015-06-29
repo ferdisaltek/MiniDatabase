@@ -53,10 +53,10 @@ namespace MiniDatabase
         {
             string phone = PhoneCountryCode.Text + " " + PhoneAreaCode.Text + " " + PhoneNumber.Text;
             Record tempRecord = new Record(UserName.Text, FirstName.Text, LastName.Text, Department.Text, AccountEndDate.Value, phone);
-            //if(!FormValidation())
-            //{
-            //    return;
-            //}
+            if (!FormValidation())
+            {
+                return;
+            }
             if (saveData(tempRecord))
             {
                 MessageBox.Show("Success!!!", "Congratulations");
@@ -69,7 +69,13 @@ namespace MiniDatabase
         {
             if (UserName.Text.Length > 10)
             {
-                MessageBox.Show("User Name should be less than 10 characters", "Input Error");
+                MessageBox.Show("User Name will be between 6 and 10 characters long", "Input Error");
+                return false;
+            }
+
+            if (UserName.Text.Length < 6)
+            {
+                MessageBox.Show("User Name will be between 6 and 10 characters long", "Input Error");
                 return false;
             }
 
@@ -85,11 +91,17 @@ namespace MiniDatabase
                 return false;
             }
 
-            //if ()
-            //{
-            //    MessageBox.Show("First Name should be less than 30 characters", "Input Error");
-            //    return false;
-            //}
+            if (Department.Text.Length > 20)
+            {
+                MessageBox.Show("Department should be less than 20 characters", "Input Error");
+                return false;
+            }
+
+            if (PhoneAreaCode.Text.Length + PhoneCountryCode.Text.Length + PhoneNumber.Text.Length > 25)
+            {
+                MessageBox.Show("TelephoneNumber should be less than 25 characters", "Input Error");
+                return false;
+            }
 
             return true;
         }
