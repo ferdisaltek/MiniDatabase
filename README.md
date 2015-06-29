@@ -1,5 +1,17 @@
 # MiniDatabase
 
+This program is coded in c # .
+
+You will need visual studio 2013 to run .There are 2 different tables in the program.
+Registration and registration inquiry.Fill in the fields to enter and save the record.
+The records are saved in C://Temp/Db.csv location entered.If this folder does not exist, create it in the C:// directory.
+Use Notepad++ to open the file Db.csv
+Search query is done by selecting the desired area on the other statements made.
+We want to make the search field with the ComboBox.
+
+General description of the project, is available below.
+
+
 In this exercise you have to load a very simple database consisting of a single table. The database is stored in CSV format in a text file. Every line in that file has the following format:
 
 Username;First Name;Last Name;Department;Account End Date;Telephone Number
