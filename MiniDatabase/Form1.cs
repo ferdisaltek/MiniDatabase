@@ -57,6 +57,7 @@ namespace MiniDatabase
             {
                 return;
             }
+
             if (saveData(tempRecord))
             {
                 MessageBox.Show("Success!!!", "Congratulations");
@@ -300,6 +301,15 @@ namespace MiniDatabase
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int kayitsayisi=0;
+            kayitsayisi = grd.RowCount;
+            MessageBox.Show(kayitsayisi.ToString(), "LoadData");
+          
 
         }
 

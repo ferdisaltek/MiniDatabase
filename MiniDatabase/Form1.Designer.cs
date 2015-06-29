@@ -71,6 +71,7 @@
             this.grdDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdAccountEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -245,6 +246,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.panelSearchByName);
             this.tabPage2.Controls.Add(this.panelSearchByPhone);
             this.tabPage2.Controls.Add(this.panelSearchByDepartment);
@@ -484,6 +486,16 @@
             this.grdPhoneNumber.ReadOnly = true;
             this.grdPhoneNumber.Width = 120;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(628, 142);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "LoadData";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,6 +567,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn grdDepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdAccountEndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdPhoneNumber;
+        private System.Windows.Forms.Button button3;
     }
 }
 
